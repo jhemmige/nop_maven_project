@@ -7,11 +7,8 @@ import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 /*@RunWith(Cucumber.class)
-@CucumberOptions(
-	
-		
-		
-		
+@CucumberOptions(	
+			
 	features="/Users/jayashreehemmige/eclipse-workspace/cucumber_nop_ecommerce_maven/Features/Login_nop_ecommerce.feature",
 	glue = "stepDefinitions",
 	dryRun= false, //before running the actual run, every step is created correctly
@@ -22,18 +19,19 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features={".//Features/"},
-		//features="/Users/jayashreehemmige/eclipse-workspace/cucumber_nop_ecommerce_maven/Features/customers.feature",
+		//features={".//Features/"},
+		features="/Users/jayashreehemmige/eclipse-workspace/cucumber_nop_ecommerce_maven/Features/customers.feature",
 		//features="/Users/jayashreehemmige/eclipse-workspace/cucumber_nop_ecommerce_maven/Features/Login_nop_ecommerce.feature",
-		glue="stepDefinitions",
+		glue="stepDefinitions",		
 		dryRun= false,
 		monochrome=true,
-		plugin= {"pretty","html:test-output"}
+		plugin= {"pretty","html:test-output", "json:target/jsonReports/cucumber-report.json"} //this is for report generation
 		//tags= "@SanityTest or @Regression" // runs cases tagged with SanityTest or Regression test
 		//tags= "@prod" // runs casees tagged as prod
 		//tags="@SanityTest"
 		
 		)
+
 public class testRunTest {
 
 }

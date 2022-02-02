@@ -1,6 +1,7 @@
 Feature: Adding Customer
 
 Background:
+
 	Given User launches Chrome Browser
   And User opens the URL "https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F"
   When User enters valid email as "admin@yourstore.com" and password as "admin"

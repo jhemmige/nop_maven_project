@@ -2,7 +2,9 @@ package stepDefinitions;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -44,9 +46,7 @@ public class Steps extends BaseClass{
 		
 		if(br.equals("Chrome")) {
 		System.setProperty("webdriver.chrome.driver", prop.getProperty("ChromePath"));
-		driver= new ChromeDriver();
-			
-		
+	
 	}
 	
 	else if (br.equals("firefox")) {
@@ -91,7 +91,7 @@ public class Steps extends BaseClass{
 	public void user_opens_the_url(String url) {
 		
 		logger.info("**********************************Opens URL*********************************************");
-	 driver.get(url);
+		driver.get(url);
 	 
 	 
 	}
